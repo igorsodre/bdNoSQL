@@ -1,0 +1,88 @@
+Tentando adiantar algumas definições pra a gente aproveitar um pouco da nossa semana universitária pra fazer outra coisa.
+
+
+1.O que é NoSql ?
+-> NoSQL é um termo usado para descrever bancos de dados não relacionais de alto desempenho.
+Os bancos de dados NoSQL usam diversos modelos de dados, incluindo documentos, gráficos, chave-valor e colunares.
+
+2.Qual é a vantagem de usar NoSql
+Bancos de dados NoSQL são amplamente reconhecidos pela facilidade de desenvolvimento, desempenho escalável,
+alta disponibilidade e resiliência
+
+3. Sql vs Nosql
+     *Modelo de dados:
+         Sql: O modelo relacional normaliza dados em estruturas tabulares conhecidas como tabelas, que consistem em linhas e colunas.
+         Um schema define estritamente as tabelas, colunas, índices, relações entre tabelas e outros elementos do banco de dados.
+         
+         NoSql :Bancos de dados não relacionais (NoSQL) normalmente não aplicam um schema. Geralmente, uma chave de partição é usada
+         para recuperar valores,conjuntos de colunas ou documentos semiestruturados JSON,
+         XML ou outros que contenham atributos de itens relacionados.
+         
+     *Propriedades ACID (Todo Sistema Gerenciador de Banco de Dados aplica os conceitos de ACID,
+                          pois, caso isto não ocorra ele não pode ser considerado um SGBD
+                          ACID = Atomicidade, Consistencia, Isolamento e Durabilidade)
+                          -Automicidade:  transação deve ser executada na
+                                         totalidade ou então nenhuma linha o será. Este
+                                         comportamento “tudo-ou-nada” serve para garantir
+                                         a consistência em operações que só fazem sentido juntas
+                                         exemplo pra ilustrar: transferencia do fundos entre duas contas.
+                           -Consistencia:
+                                          Uma transacção deve iniciar a sua
+                                          execução tendo o sistema um estado conhecido e ao
+                                          terminar deixá-lo num estado igualmente
+                                          consistente, isto que dizer que, 
+                                          Não se podem deixar operações em suspenso
+                                          para serem tratados por outros blocos /transações
+                                          Caso a transação aborte, o sistema volta ao
+                                          estado anterior ao início da execução da
+                                          transação e, por este facto, consistente
+                           -Isolamento :
+                                          As transações não devem depender de outras ou influenciar a execução de outras                                     
+                                          transações. Cada transacção deve ter a percepção de que está sendo executando isoladamente no sistema
+                                          Quando tal não acontece é vulgar atingir situações de bloqueio mútuo (deadlocks)
+                                          Diferentes transacções estão à espera de outra(s) para poderem prosseguir a sua execução.
+                                          Situação irreversível que pode conduzir à instabilidade do sistema
+                                          
+                           - Durabilidade : Após a sua completa execução o objectivo da transação foi atingido e não deverão
+                                           existir razões para que algumas das suas instruções sejam anuladas.                                           
+                                           Qualquer alteração ao estado da base de dados deverão ser efectuadas por outras transação
+                                           explicitamente construídas com esse objectivo 
+          Sql: Sistemas de gerenciamento de bancos de dados relacionais (RDBMS) 
+                tradicionais são compatíveis com um conjunto de propriedades definido pela sigla ACID.
+                
+          Nosql:Bancos de dados NoSQL normalmente trocam algumas propriedades ACID de sistemas de gerenciamento de bancos de dados relacionais (RDBMS)
+                 por um modelo de dados mais flexível que escala horizontalmente.
+                 Essas características fazem dos bancos de dados NoSQL uma excelente opção em situações em que os RDBMS deparam com desafios
+                 de arquitetura e precisam solucionar uma combinação de gargalos de desempenho, escalabilidade, complexidade operacional
+                 e custos crescentes de administração e suporte.
+    *Desempenho :
+           Sql: O desempenho normalmente depende do subsistema do disco.
+                A otimização de consultas, índices e estrutura de tabela é necessária para alcançar máximo desempenho.
+               
+           NoSql : Desempenho geralmente é uma função do tamanho do cluster do hardware subjacente, da latência de rede
+                   e da aplicação que faz a chamada.
+    *Escala : 
+        Sql: Mais fácil de aumentar a escala "verticalmente" com hardware mais rápido.
+             Outros investimentos são necessários para tabelas relacionais para abranger um sistema distribuído.
+        
+        NoSql : Projetado para aumentar a escala "horizontalmente" usando clusters distribuídos de hardware de baixo custo
+                para aumentar a transferência sem aumentar a latência.
+     *APIs :
+        Sql : As solicitações para armazenar e recuperar dados são comunicadas usando consultas compatíveis com structured query language (SQL).
+              Essas consultas são analisadas e executadas por sistemas de gerenciamento de bancos de dados relacionais (RDBMS).
+        
+        NoSql : APIs baseadas em objetos permitem que desenvolvedores de aplicações armazenem e restaurem facilmente estruturas de dados na memória.
+                As chaves de partição permitem que os aplicativos procurem pares de chave-valor,conjuntos de colunas ou documentos
+                semiestruturados contendo objetos e atributos de aplicativos serializados.
+     *Ferramentas :
+         Sql : Os bancos de dados SQL normalmente oferecem um rico conjunto de ferramentas para simplificar o desenvolvimento de aplicações
+               orientadas ao banco de dados.
+         
+         NoSql : Os bancos de dados NoSQL normalmente oferecem ferramentas para gerenciar clusters e escalabilidade.
+                 As aplicações são a interface principal com os dados subjacentes.
+        
+                          
+                                        
+
+                          
+      
