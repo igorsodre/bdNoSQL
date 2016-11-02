@@ -1,0 +1,27 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "Sistema simples de demonstração de um banco de dados NoSQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorsodre/bdNoSQL.git"
+  },
+  "author": "Igor Sodre, Kilmer Luiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igorsodre/bdNoSQL/issues"
+  },
+  "homepage": "https://github.com/igorsodre/bdNoSQL#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "method-override": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "morgan": "*"
+  }
+}
