@@ -5,8 +5,9 @@ var express  = require('express');
     var bodyParser = require('body-parser');         // pull information from HTML POST (express4)
     var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
     var database = require('./config/database');
+    var redis = require('redis');
     var port     = process.env.PORT || 8888;         // set the port
-
+    var client = redis.createClient(6379,'localhost');
 
     // configuration ===============================================================
     mongoose.connect(database.url);     // connect to mongoDB database on modulus.io
@@ -17,6 +18,10 @@ var express  = require('express');
     app.use(bodyParser.json());                                     // parse application/json
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
     app.use(methodOverride());
+    app.redisClient = client;
+    client.on('connect',function(){
+       console.log('Redis Connected');
+    });
 
     // routes ======================================================================
     require('./app/routes.js')(app);

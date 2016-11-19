@@ -17,11 +17,15 @@
   },
   "homepage": "https://github.com/igorsodre/bdNoSQL#readme",
   "dependencies": {
+    "MD5": "^1.3.0",
     "body-parser": "*",
     "express": "*",
     "method-override": "*",
     "mongodb": "*",
     "mongoose": "*",
-    "morgan": "*"
+    "morgan": "*",
+    "promise": "^7.1.1",
+    "promises": "^0.2.5",
+    "redis": "^2.6.3"
   }
 }

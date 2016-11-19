@@ -59,7 +59,28 @@
 
             </div>
         </div>
+        <div class="jumbotron text-center">
+            <h2> DONE TODOS <span class="label label-info">{{ doneTodos.length }}</span></h2>
+        </div>
+        <!--    DONE TODO LIST   -->
+        <div id="done-list" class="row">
+            <div class="col-sm-4 col-sm-offset-4">
 
+                <!-- LOOP OVER THE TODOS IN $scope.todos -->
+                <div class="checkbox" ng-repeat="doneTodo in doneTodos">
+                    <label>
+                        <input type="checkbox" ng-click="deleteTodoRedis(doneTodo.key)"> {{ doneTodo.text }}
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Todo{_id,text,stauts}
+        hmset('TODO'{
+            text:value,
+            status:
+        })-->
 
 
     </div>
